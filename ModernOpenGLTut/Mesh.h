@@ -6,7 +6,9 @@ class Vertex
 {
 private:
 	glm::vec3 position;
+	glm::vec2 texCoord;
 public:
+	Vertex(const glm::vec3& pos, const glm::vec2& tc) : position(pos), texCoord(tc) {}
 	Vertex(const glm::vec3& pos) : position(pos) {}
 	~Vertex() {}
 };

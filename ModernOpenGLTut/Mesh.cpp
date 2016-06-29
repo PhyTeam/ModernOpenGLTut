@@ -1,8 +1,11 @@
 #include "Mesh.h"
-
+#include <array>
 Mesh::Mesh(Vertex * vertices, unsigned int numVertices)
 {
 	m_drawCount = numVertices;
+	// Generate vertices data structure
+	std::array<glm::vec3> v_arr(numVertices);
+
 	glGenVertexArrays(1, &m_vertexArrayObject);
 	glBindVertexArray(m_vertexArrayObject);
 
