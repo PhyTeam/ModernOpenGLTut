@@ -1,7 +1,10 @@
 #version 330
-in vec2 TexCoord0;
 
 uniform sampler2D gSampler;
+
+in vec2 TexCoord0;
+
+
 
 void main()
 
