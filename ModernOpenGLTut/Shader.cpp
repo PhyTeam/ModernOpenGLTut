@@ -8,6 +8,7 @@ static GLint CreateShader(const std::string& text, GLenum type);
 
 Shader::Shader(const std::string & fileName)
 {
+	// 
 	m_Program = glCreateProgram();
 	m_Shaders[0] = CreateShader(LoadShader(fileName + ".vs"), GL_VERTEX_SHADER);
 	m_Shaders[1] = CreateShader(LoadShader(fileName + ".fs"), GL_FRAGMENT_SHADER);
