@@ -6,8 +6,12 @@ class Vertex
 {
 private:
 	glm::vec3 position;
+	glm::vec2 texCoord;
 public:
+	Vertex(const glm::vec3& pos, const glm::vec2& tc) : position(pos), texCoord(tc) {}
 	Vertex(const glm::vec3& pos) : position(pos) {}
+	inline glm::vec3 getPosition() const { return position; };
+	inline glm::vec2 getTexCoord() const { return texCoord; };
 	~Vertex() {}
 };
 
@@ -25,6 +29,7 @@ private:
 	enum
 	{
 		POSITION_VB,
+		TEXCOORD_VB,
 		NUM_BUFFERS
 	};
 	GLuint m_vertexArrayObject;
